@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik+Wet+Paint&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.grid{
+    display: grid;
+    grid-template-rows: 70px 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "header header header header header"
+                        "header header header header header"
+                        "main main main main main"
+                        "footer footer footer footer footer";
+    background-image: url(multimedia/foto4.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.grid2{
+        display: grid;
+        grid-template-rows: 70px 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "header header header header"
+                            "main main main main"
+                            "main main main main"
+                            "footer footer footer footer";
+        background-image: url(multimedia/foto4.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+}
+
+body{
+    background-color: black;
+}
+
+    /*hay un error en el titulo al refrescar, se ve otra letra por un segundo*/
+.titulo{
+    flex-grow: 1;
+    font-family: 'Bebas Neue', cursive;
+    color: #CACFD2 ;
+    font-size: 70px;
+    padding: 20px;
+}
+.navegacion{
+    grid-column: 1/6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+
+.button{
+    background-image: linear-gradient(to right, #44130d, #922B21, #D35400, #F4D03F);
+    grid-column: 3/4;
+    grid-row: 4/5;
+    align-self: center;
+    justify-self: center;
+    height: 70px;
+    width: fit-content;
+    color: black;
+    font-size: 32px;
+    border: #641E16;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.button:hover{
+    height: 80px;
+}
+
+ul{
+    list-style: none;
+}
+
+/*no puedo modificar color de letras*/
+.navegacion__items__lista{
+    font-family: 'Teko', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+li{
+    padding: 10px;
+}
+
+h2{
+    color: rgb(207, 94, 19);
+    font-size: 32px;
+}
+.titulovid{
+    display: grid;
+    grid-column: 2/6;
+    grid-row: 3/4;
+}
+.main__videos{
+    display: flex;
+    flex-direction: column;
+}
+.main__videos__iframes{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    margin: 50px;
+}
+
+.main__personajes{
+    display: flex;
+    flex-direction: column;
+    color: #F4D03F;
+    font-size: 20px;
+}
+
+.div__comunidad{
+    grid-column: 1/4;
+    grid-row: 2/4;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.tituloDos{
+    background-color: black;
+    opacity: 0.7;
+    animation-name: animacion;
+    animation-duration: 2s;
+    animation-iteration-count: inherit;
+    animation-delay: 2s;
+}
+
+.lorem{
+    color: #F4D03F;
+    font-size: 20px;
+    background-color: black;
+    opacity: 0.7;
+}
+
+.section__imagenes{
+    display: flex;
+    justify-content: row;
+    padding: 20px;
+    opacity: 0.9;
+}
+
+.imagenUno{
+    width: 500px;
+    margin-right: 50px;
+}
+.imagenDos{
+    width: 500px;
+}
+
+/*animacion titulo comunidad*/
+
+@keyframes animacion {
+    0%{
+        color: rgb(207, 195, 19);
+        font-size: 30px;
+    }
+    25%{
+        color: rgb(207, 94, 19);
+        font-size: 30px;
+    }
+    50%{
+        color: rgb(204, 53, 16);
+        font-size: 40px;
+        transform: rotate(35deg);
+    }
+    75%{
+        color: rgb(214, 32, 25);
+        font-size: 40px;
+    }
+    100%{
+        color: rgb(99, 4, 4);
+        font-size: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*responsive para index*/
+
+@media screen and (max-width: 810px){
+
+.grid{
+    display: grid;
+    grid-template-rows: 70px 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "header header header header"
+                        "header header header header"
+                        "main main main main"
+                        "footer footer footer footer";
+    background-image: url(multimedia/foto4.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    }
+
+    .titulo{
+        flex-grow: 1;
+        font-family: 'Bebas Neue', cursive;
+        color: #CACFD2 ;
+        font-size: 50px;
+        padding: 20px;
+    }
+
+    .button{
+        background-image: linear-gradient(to right, #44130d, #922B21, #D35400, #F4D03F);
+        grid-column: 2/4;
+        grid-row: 4/5;
+        align-self: center;
+        justify-self: center;
+        height: 70px;
+        width: fit-content;
+        color: black;
+        font-size: 32px;
+        border: #641E16;
+        border-radius: 30px;
+        padding: 10px;
+    }
+
+
+}
+
+@media screen and (max-width: 696px){
+
+    .grid{
+        display: grid;
+        grid-template-rows: 70px 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "header header header"
+                            "header header header"
+                            "main main main"
+                            "footer footer footer";
+        background-image: url(multimedia/foto4.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        }
+    
+        .titulo{
+            flex-grow: 1;
+            font-family: 'Bebas Neue', cursive;
+            color: #CACFD2 ;
+            font-size: 40px;
+            padding: 10px;
+        }
+    
+        .button{
+            background-image: linear-gradient(to right, #44130d, #922B21, #D35400, #F4D03F);
+            grid-column: 2/3;
+            grid-row: 4/5;
+            align-self: center;
+            justify-self: center;
+            height: 70px;
+            width: fit-content;
+            color: black;
+            font-size: 32px;
+            border: #641E16;
+            border-radius: 30px;
+            padding: 10px;
+        }
+    }
+
+        /*responsive para comunidad*/
+
+@media screen and (max-width: 1500px){
+
+
+    .grid2{
+        display: grid;
+        grid-template-rows: 70px 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        background-image: url(multimedia/foto4.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }   
+
+    .imagenUno{
+        width: 400px;
+        margin-right: 50px;
+    }
+}
+
+@media screen and (max-width: 1300px){
+
+
+    .grid2{
+        display: grid;
+        grid-template-rows: 70px 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        background-image: url(multimedia/foto4.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
+
+    .section__imagenes{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        opacity: 0.9;
+    }
+    .imagenUno{
+        width: 300px;
+        margin-right: 50px;
+    }
+    .imagenDos{
+        width: 300px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik+Wet+Paint&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.grid{
+    display: grid;
+    grid-template-rows: 70px 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background-image: url(multimedia/7bc1dc55e1c2a2f57be209c2aaa5b544.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+body{
+    background-color: black;
+}
+
+.titulo{
+    flex-grow: 1;
+    font-family: 'Bebas Neue', cursive;
+    color: #CACFD2 ;
+    font-size: 70px;
+    padding: 20px;
+}
+.navegacion{
+    grid-column: 1/6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/*no me toma el font family
+.button{
+    background-image: linear-gradient(to right, #44130d, #922B21, #D35400, #F4D03F);
+    grid-column: 3/4;
+    grid-row: 3/4;
+    align-self: center;
+    justify-self: center;
+    height: 70px;
+    width: fit-content;
+    color: black;
+    font-size: 32px;
+    border: #641E16;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.button:hover{
+    height: 80px;
+}
+
+ul{
+    list-style: none;
+}
+
+/*no puedo modificar color de letras
+.navegacion__items__lista{
+    font-family: 'Teko', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+li{
+    padding: 10px;
+}
+
+h2{
+    color: rgb(207, 94, 19);
+    font-size: 32px;
+}
+.titulovid{
+    display: grid;
+    grid-column: 2/6;
+    grid-row: 3/4;
+}
+.main__videos{
+    display: flex;
+    flex-direction: column;
+}
+.main__videos__iframes{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    margin: 50px;
+}
+
+.main__personajes{
+    display: flex;
+    flex-direction: column;
+    color: #F4D03F;
+    font-size: 20px;
+}
+
+.div__comunidad{
+    grid-column: 1/6;
+    grid-row: 2/4;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.tituloDos{
+    background-color: black;
+    opacity: 0.7;
+}
+
+.lorem{
+    color: #F4D03F;
+    font-size: 20px;
+    background-color: black;
+    opacity: 0.7;
+}
+
+.section__imagenes{
+    display: flex;
+    justify-content: row;
+    padding: 20px;
+    opacity: 0.9;
+}
+
+.imagenUno{
+    width: 500px;
+    margin-right: 50px;
+}
+.imagenDos{
+    width: 500px;
+}*/
