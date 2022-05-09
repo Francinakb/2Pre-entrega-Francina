@@ -115,7 +115,7 @@ h2{
     font-size: 20px;
 }
 
-.div__comunidad{
+.art__comunidad{
     grid-column: 1/4;
     grid-row: 2/4;
     margin-top: 50px;
@@ -125,7 +125,7 @@ h2{
 }
 
 .tituloDos{
-    background-color: black;
+    background-color: rgb(54, 26, 26);
     opacity: 0.7;
     animation-name: animacion;
     animation-duration: 2s;
@@ -144,16 +144,17 @@ h2{
     display: flex;
     justify-content: row;
     padding: 20px;
-    opacity: 0.9;
 }
 
-.imagenUno{
-    width: 500px;
-    margin-right: 50px;
+.imagen-uno{
+    width: 400px;
+
 }
-.imagenDos{
-    width: 500px;
+.imagen-dos{
+    width: 400px;
+    /* margin-left: 400px; */
 }
+
 
 /*animacion titulo comunidad*/
 
@@ -180,15 +181,6 @@ h2{
         font-size: 30px;
     }
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -278,7 +270,7 @@ h2{
 
         /*responsive para comunidad*/
 
-@media screen and (max-width: 1500px){
+@media screen and (max-width: 1370px){
 
 
     .grid2{
@@ -291,13 +283,18 @@ h2{
         height: 100vh;
     }   
 
-    .imagenUno{
-        width: 400px;
-        margin-right: 50px;
+    .imagen-uno{
+        width: 350px;
+
+    }
+
+    .imagen-dos{
+        width: 350px;
+        margin-left: 300px;
     }
 }
 
-@media screen and (max-width: 1300px){
+@media screen and (max-width: 900px){
 
 
     .grid2{
@@ -310,18 +307,13 @@ h2{
         height: 100vh;
     }
 
-    .section__imagenes{
-        display: flex;
-        flex-direction: column;
-        padding: 20px;
-        opacity: 0.9;
     }
-    .imagenUno{
+    .imagen-uno{
         width: 300px;
-        margin-right: 50px;
     }
-    .imagenDos{
+    .imagen-dos{
         width: 300px;
+        margin-left: 300px;
     }
 }
 
